@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chase Mini-Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menu Principal -->
+    <div id="mainMenu" class="menu-container" style="display: none;">
+        <div class="menu-box">
+            <div class="menu-header">
+                <h1 class="menu-title">COURSE-POURSUITE</h1>
+                <p class="menu-subtitle">Mini-jeu 1v1</p>
+                <button class="close-btn" id="closeBtn">✕</button>
+            </div>
+            
+            <div class="menu-content">
+                <div class="menu-info">
+                    <div class="info-item">
+                        <span class="info-icon">🏁</span>
+                        <span class="info-text">3 manches pour gagner</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⚔️</span>
+                        <span class="info-text">Combat au sol dans une zone définie</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⏱️</span>
+                        <span class="info-text">Sortez vite de votre véhicule !</span>
+                    </div>
+                </div>
+                
+                <div class="menu-buttons">
+                    <button class="menu-btn primary" id="searchBtn">
+                        <span class="btn-icon">🔍</span>
+                        <span class="btn-text">RECHERCHER UNE PARTIE</span>
+                    </button>
+                    
+                    <button class="menu-btn secondary" id="botBtn" style="display: none;">
+                        <span class="btn-icon">🤖</span>
+                        <span class="btn-text">AJOUTER UN BOT</span>
+                    </button>
+                </div>
+                
+                <div class="searching-status" id="searchingStatus" style="display: none;">
+                    <div class="loading-spinner"></div>
+                    <p>Recherche d'un adversaire en cours...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Compte à rebours -->
+    <div id="countdown" class="countdown-container" style="display: none;">
+        <div class="countdown-bg"></div>
+        <div class="countdown-number" id="countdownNumber">3</div>
+        <div class="countdown-text">PRÉPAREZ-VOUS</div>
+    </div>
+    
+    <!-- Notifications -->
+    <div id="notifications" class="notifications-container"></div>
+    
+    <!-- Écran de fin -->
+    <div id="endScreen" class="end-screen" style="display: none;">
+        <div class="end-content">
+            <div class="end-result" id="endResult">VICTOIRE</div>
+            <div class="end-score" id="endScore">3 - 1</div>
+            <div class="end-message">Félicitations champion !</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
