@@ -11,7 +11,7 @@ Config = {}
 
 Config.Framework = "ESX" -- "ESX", "QB" ou "STANDALONE"
 Config.Locale = "fr" -- Langue par défaut
-Config.Debug = false -- Mode debug (affiche les logs dans la console)
+Config.Debug = true -- ⚠️ ACTIVÉ POUR VOIR LES LOGS - Mettre false en production
 
 -- ════════════════════════════════════════════════════════════════
 -- NPC ET LOBBY
@@ -39,7 +39,7 @@ Config.SpawnLocations = {
             vehicle = vector4(-1168.25, -2997.71, 13.95, 240.0),
             player = vector3(-1168.25, -2997.71, 13.95)
         },
-        fightZones = { -- Zones de combat possibles
+        fightZones = { -- Zones de combat possibles (FALLBACK si pas de drop coords)
             vector3(-1100.0, -3000.0, 13.95),
             vector3(-1150.0, -2950.0, 13.95),
             vector3(-1050.0, -3050.0, 13.95)

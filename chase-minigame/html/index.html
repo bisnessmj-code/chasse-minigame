@@ -48,6 +48,10 @@
                 <div class="searching-status" id="searchingStatus" style="display: none;">
                     <div class="loading-spinner"></div>
                     <p>Recherche d'un adversaire en cours...</p>
+                    <button class="menu-btn cancel-btn" id="cancelSearchBtn">
+                        <span class="btn-icon">✕</span>
+                        <span class="btn-text">ANNULER LA RECHERCHE</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -57,18 +61,27 @@
     <div id="countdown" class="countdown-container" style="display: none;">
         <div class="countdown-bg"></div>
         <div class="countdown-number" id="countdownNumber">3</div>
-        <div class="countdown-text">PRÉPAREZ-VOUS</div>
+        <div class="countdown-text" id="countdownText">PRÉPAREZ-VOUS</div>
     </div>
     
     <!-- Notifications -->
     <div id="notifications" class="notifications-container"></div>
+    
+    <!-- Timer de drop -->
+    <div id="dropTimer" class="drop-timer" style="display: none;">
+        <div class="timer-icon">⏱️</div>
+        <div class="timer-content">
+            <div class="timer-label">TEMPS RESTANT POUR DROP</div>
+            <div class="timer-value" id="timerValue">45s</div>
+        </div>
+    </div>
     
     <!-- Écran de fin -->
     <div id="endScreen" class="end-screen" style="display: none;">
         <div class="end-content">
             <div class="end-result" id="endResult">VICTOIRE</div>
             <div class="end-score" id="endScore">3 - 1</div>
-            <div class="end-message">Félicitations champion !</div>
+            <div class="end-message" id="endMessage">Félicitations champion !</div>
         </div>
     </div>
 

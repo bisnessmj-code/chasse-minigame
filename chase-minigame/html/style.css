@@ -203,6 +203,19 @@ body {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
+.menu-btn.cancel-btn {
+    background: rgba(255, 107, 107, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 107, 107, 0.4);
+    margin-top: 15px;
+}
+
+.menu-btn.cancel-btn:hover {
+    background: rgba(255, 107, 107, 0.3);
+    border-color: rgba(255, 107, 107, 0.6);
+    transform: translateY(-2px);
+}
+
 .btn-icon {
     font-size: 22px;
     z-index: 1;
@@ -299,6 +312,119 @@ body {
     z-index: 1500;
 }
 
+/* ════════════════════════════════════════════════════════════════
+   TIMER DE DROP
+   ════════════════════════════════════════════════════════════════ */
+
+.drop-timer {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(22, 33, 62, 0.95));
+    padding: 15px 25px;
+    border-radius: 12px;
+    border-left: 4px solid #ff6b6b;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    animation: timerPulse 2s ease-in-out infinite;
+    z-index: 1500;
+}
+
+.timer-icon {
+    font-size: 32px;
+    animation: timerIconRotate 3s linear infinite;
+}
+
+.timer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.timer-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.timer-value {
+    color: #ff6b6b;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+.drop-timer.warning {
+    border-left-color: #f39c12;
+    animation: timerWarning 1s ease-in-out infinite;
+}
+
+.drop-timer.warning .timer-value {
+    color: #f39c12;
+}
+
+.drop-timer.critical {
+    border-left-color: #e74c3c;
+    animation: timerCritical 0.5s ease-in-out infinite;
+}
+
+.drop-timer.critical .timer-value {
+    color: #e74c3c;
+}
+
+@keyframes timerPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+@keyframes timerIconRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes timerWarning {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(243, 156, 18, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(243, 156, 18, 0.6);
+    }
+}
+
+@keyframes timerCritical {
+    0%, 100% {
+        transform: scale(1) translateX(0);
+        box-shadow: 0 10px 30px rgba(231, 76, 60, 0.5);
+    }
+    25% {
+        transform: scale(1.08) translateX(-3px);
+        box-shadow: 0 15px 40px rgba(231, 76, 60, 0.8);
+    }
+    75% {
+        transform: scale(1.08) translateX(3px);
+        box-shadow: 0 15px 40px rgba(231, 76, 60, 0.8);
+    }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   NOTIFICATIONS (SUITE)
+   ════════════════════════════════════════════════════════════════ */
+
 .notification {
     background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(22, 33, 62, 0.95));
     border-radius: 10px;
@@ -369,6 +495,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 0 50px rgba(149, 225, 211, 0.5);
 }
 
 .end-result.defeat {
@@ -376,6 +503,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 0 50px rgba(255, 107, 107, 0.5);
 }
 
 .end-score {
@@ -383,6 +511,7 @@ body {
     font-weight: 600;
     color: white;
     margin-bottom: 15px;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
 .end-message {

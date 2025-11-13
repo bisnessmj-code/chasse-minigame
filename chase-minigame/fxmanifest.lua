@@ -2,8 +2,8 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'Votre Nom'
-description 'Mini-jeu Course-Poursuite 1v1 - Un système de combat PvP avec phases de poursuite et de combat au sol'
-version '1.0.0'
+description 'Mini-jeu Course-Poursuite 1v1 - Un système de combat PvP avec phases de poursuite et de combat au sol - VERSION CORRIGÉE'
+version '1.1.0'
 
 lua54 'yes'
 
@@ -31,7 +31,7 @@ files {
 
 -- Dépendances (optionnelles)
 dependencies {
-    -- 'es_extended' -- Décommenter si vous utilisez ESX
+    'es_extended'
     -- 'qb-core' -- Décommenter si vous utilisez QB-Core
 }
 
